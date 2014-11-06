@@ -30,7 +30,7 @@
 #include <assert.h>
 
 #define FILE_VIDEO "/dev/video0"
-#define JPG "/lxm/picture/image%d.jpg"
+#define JPG "test.jpg"
 
 typedef struct{
 	void *start;
@@ -141,7 +141,7 @@ int init_camera_device(int fd){
 	tv_fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
 	tv_fmt.fmt.pix.width = 680;
 	tv_fmt.fmt.pix.height = 480;
-	tv_fmt.fmt.pix.pixelformat = V4L2_PIX_FMT_MJPEG;
+	tv_fmt.fmt.pix.pixelformat = V4L2_PIX_FMT_YUYV;
 	tv_fmt.fmt.pix.field = V4L2_FIELD_INTERLACED;
 	if(ioctl(fd, VIDIOC_S_FMT, &tv_fmt)<0){
 		printf("Failed to ioctl: VIDIOC_S_FMT\n");
@@ -294,6 +294,7 @@ void close_camera_device(int fd){
 }
 
 int main(){
+	printf("hello world\n");
 	int fd; 
 	fd = open_camera_device();
 	init_camera_device(fd);
