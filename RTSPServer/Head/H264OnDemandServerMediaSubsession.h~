@@ -1,3 +1,10 @@
+/*
+ * H264OnDemandServerMediaSubsession.h
+ *
+ *  Created on: 2014年1月4日
+ *      Author: ny
+ */
+
 #ifndef H264ONDEMANDSERVERMEDIASUBSESSION_H_
 #define H264ONDEMANDSERVERMEDIASUBSESSION_H_
 

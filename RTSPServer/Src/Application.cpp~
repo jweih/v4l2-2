@@ -37,8 +37,9 @@ int main()
 	ServerMediaSession* sms = ServerMediaSession::createNew(*env, streamName,
 			streamName, descriptionString);
 
+	V4L2FramedSource v4l2fs = 
 	sms->addSubsession(
-			new H264OnDemandServerMediaSubsession(*env,new V4L2FramedSource(*env)));
+			new H264OnDemandServerMediaSubsession(*env,new V4L2FramedSource(*env);));
 	
 	rtspServer->addServerMediaSession(sms);
 	announceStream(rtspServer, sms, streamName);

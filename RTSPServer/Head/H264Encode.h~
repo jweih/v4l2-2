@@ -1,4 +1,9 @@
-
+/*
+ * H264Encode.h
+ *
+ *  Created on: 2014年1月4日
+ *      Author: ny
+ */
 
 #ifndef H264ENCODE_H_
 #define H264ENCODE_H_
